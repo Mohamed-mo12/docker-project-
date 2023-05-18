@@ -1,0 +1,11 @@
+FROM python 
+
+ENV PYTHONUNBUFFER 1 
+
+WORKDIR /app 
+
+RUN pip install  django django-cors-headers requests flask_sqlalchemy   
+
+COPY . . 
+
+EXPOSE 8000 
